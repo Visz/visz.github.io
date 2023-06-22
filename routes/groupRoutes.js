@@ -36,7 +36,7 @@ router.post('/groups', async (req, res) => {
     // Create a new group
     const group = new Group({
       name: req.body.name,
-      spots: Array(5).fill({}) // Create 5 empty spots
+      spots: Array(5).fill({ userName: null }) // Create 5 empty spots with userName set to null
     });
   
     try {
@@ -49,6 +49,7 @@ router.post('/groups', async (req, res) => {
       res.status(500).send(error);
     }
   });
+  
 
   router.get('/join/:groupId', async (req, res) => {
     try {
