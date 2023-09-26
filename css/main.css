@@ -260,4 +260,84 @@ textarea {
     page-break-after: avoid;
   }
 }
+header {
+  animation: fade-in 1s ease-out;
+}
 
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+body {
+
+}
+.background-image {
+  position: relative;
+}
+
+.background-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://w.wallhaven.cc/full/x6/wallhaven-x6pl9v.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.4;
+  z-index: -1;
+}
+header {
+  background-color: #2c3e50;
+  color: #fff;
+}
+
+main {
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+a {
+  color: #3498db;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+h1, h2 {
+  font-weight: bold;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 24px;
+  color: #2c3e50;
+}
+
+p {
+  margin: 0;
+}
+
+footer {
+  background-color: #2c3e50;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
