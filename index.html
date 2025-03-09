@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>John Anderson - Software Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <style>
+      :where([class^="ri-"])::before { content: "\f3c2"; }
+      body { font-family: 'Inter', sans-serif; }
+      .skill-bar { transition: width 0.3s ease-in-out; }
+      .timeline-dot::before {
+          content: '';
+          position: absolute;
+          left: -39px;
+          width: 14px;
+          height: 14px;
+          border-radius: 50%;
+          background: #3b82f6;
+          border: 2px solid white;
+      }
+      .timeline-line::before {
+          content: '';
+          position: absolute;
+          left: -33px;
+          top: 24px;
+          width: 2px;
+          height: calc(100% - 24px);
+          background: #e5e7eb;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#3b82f6",
+              secondary: "#64748b",
+            },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-gray-50 min-h-screen">
+    <div class="max-w-5xl mx-auto px-4 py-12">
+      <header class="bg-white rounded-lg shadow-sm p-8 mb-8">
+        <div class="flex items-center gap-8">
+          <img
+            src="https://public.readdy.ai/ai/img_res/e9f5fbf1bf4288adf18b87529e6e5e5e.jpg"
+            alt="John Anderson"
+            class="w-48 h-48 rounded-full object-cover border-4 border-primary"
+          />
+          <div class="flex-1">
+            <h1 class="text-4xl font-bold text-gray-900">John Anderson</h1>
+            <p class="text-xl text-secondary mt-2">Senior Software Engineer</p>
+            <div class="flex gap-4 mt-6">
+              <a
+                href="#"
+                class="inline-flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-button hover:bg-blue-600 transition cursor-pointer"
+              >
+                <i
+                  class="ri-download-line w-5 h-5 flex items-center justify-center"
+                ></i>
+                Download CV
+              </a>
+              <a
+                href="mailto:john.anderson@email.com"
+                class="inline-flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-button hover:bg-gray-50 transition cursor-pointer"
+              >
+                <i
+                  class="ri-mail-line w-5 h-5 flex items-center justify-center"
+                ></i>
+                Contact Me
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="grid grid-cols-3 gap-8">
+        <div class="col-span-2">
+          <section class="bg-white rounded-lg shadow-sm p-8 mb-8">
+            <h2 class="text-2xl font-semibold mb-6">About Me</h2>
+            <p class="text-gray-600 leading-relaxed">
+              Experienced software engineer with over 8 years of expertise in
+              full-stack development, specializing in building scalable web
+              applications and microservices. Passionate about clean code,
+              performance optimization, and mentoring junior developers.
+              Currently focused on cloud-native technologies and distributed
+              systems.
+            </p>
+          </section>
+
+          <section class="bg-white rounded-lg shadow-sm p-8 mb-8">
+            <h2 class="text-2xl font-semibold mb-6">Work Experience</h2>
+            <div class="relative pl-8">
+              <div class="mb-8 relative timeline-dot timeline-line">
+                <h3 class="text-lg font-semibold">Senior Software Engineer</h3>
+                <p class="text-secondary">
+                  TechCorp Solutions • 2021 - Present
+                </p>
+                <ul class="mt-4 text-gray-600 list-disc pl-4">
+                  <li>
+                    Led the development of a microservices-based e-commerce
+                    platform
+                  </li>
+                  <li>Mentored team of 5 junior developers</li>
+                  <li>Improved system performance by 40%</li>
+                </ul>
+              </div>
+              <div class="mb-8 relative timeline-dot timeline-line">
+                <h3 class="text-lg font-semibold">Software Engineer</h3>
+                <p class="text-secondary">InnovateTech • 2018 - 2021</p>
+                <ul class="mt-4 text-gray-600 list-disc pl-4">
+                  <li>Developed and maintained multiple web applications</li>
+                  <li>Implemented CI/CD pipelines</li>
+                  <li>Reduced deployment time by 60%</li>
+                </ul>
+              </div>
+              <div class="relative timeline-dot">
+                <h3 class="text-lg font-semibold">Junior Developer</h3>
+                <p class="text-secondary">StartUp Inc • 2016 - 2018</p>
+                <ul class="mt-4 text-gray-600 list-disc pl-4">
+                  <li>Built responsive web interfaces</li>
+                  <li>Collaborated with design team</li>
+                  <li>Participated in code reviews</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="bg-white rounded-lg shadow-sm p-8">
+            <h2 class="text-2xl font-semibold mb-6">Projects</h2>
+            <div class="grid grid-cols-2 gap-6">
+              <div class="border border-gray-200 rounded-lg p-4">
+                <h3 class="font-semibold">E-commerce Platform</h3>
+                <p class="text-gray-600 mt-2">
+                  A full-stack e-commerce solution with microservices
+                  architecture
+                </p>
+                <div class="flex gap-2 mt-4">
+                  <span
+                    class="px-2 py-1 bg-blue-100 text-blue-800 rounded text-sm"
+                    >React</span
+                  >
+                  <span
+                    class="px-2 py-1 bg-green-100 text-green-800 rounded text-sm"
+                    >Node.js</span
+                  >
+                  <span
+                    class="px-2 py-1 bg-purple-100 text-purple-800 rounded text-sm"
+                    >Docker</span
+                  >
+                </div>
+              </div>
+              <div class="border border-gray-200 rounded-lg p-4">
+                <h3 class="font-semibold">Analytics Dashboard</h3>
+                <p class="text-gray-600 mt-2">
+                  Real-time analytics dashboard for monitoring system metrics
+                </p>
+                <div class="flex gap-2 mt-4">
+                  <span
+                    class="px-2 py-1 bg-blue-100 text-blue-800 rounded text-sm"
+                    >Vue.js</span
+                  >
+                  <span
+                    class="px-2 py-1 bg-red-100 text-red-800 rounded text-sm"
+                    >Redis</span
+                  >
+                  <span
+                    class="px-2 py-1 bg-yellow-100 text-yellow-800 rounded text-sm"
+                    >AWS</span
+                  >
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="col-span-1">
+          <section class="bg-white rounded-lg shadow-sm p-8 mb-8">
+            <h2 class="text-2xl font-semibold mb-6">Contact</h2>
+            <div class="space-y-4">
+              <div class="flex items-center gap-3">
+                <i
+                  class="ri-mail-line w-5 h-5 flex items-center justify-center text-primary"
+                ></i>
+                <span class="text-gray-600">john.anderson@email.com</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <i
+                  class="ri-phone-line w-5 h-5 flex items-center justify-center text-primary"
+                ></i>
+                <span class="text-gray-600">+1 (555) 123-4567</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <i
+                  class="ri-map-pin-line w-5 h-5 flex items-center justify-center text-primary"
+                ></i>
+                <span class="text-gray-600">San Francisco, CA</span>
+              </div>
+            </div>
+            <div class="flex gap-4 mt-6">
+              <a
+                href="#"
+                class="w-8 h-8 flex items-center justify-center text-secondary hover:text-primary transition cursor-pointer"
+              >
+                <i class="ri-linkedin-line"></i>
+              </a>
+              <a
+                href="#"
+                class="w-8 h-8 flex items-center justify-center text-secondary hover:text-primary transition cursor-pointer"
+              >
+                <i class="ri-github-line"></i>
+              </a>
+              <a
+                href="#"
+                class="w-8 h-8 flex items-center justify-center text-secondary hover:text-primary transition cursor-pointer"
+              >
+                <i class="ri-twitter-line"></i>
+              </a>
+            </div>
+          </section>
+          <section class="bg-white rounded-lg shadow-sm p-8 mb-8">
+            <h2 class="text-2xl font-semibold mb-6">Skills</h2>
+            <div class="space-y-4">
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-gray-700">JavaScript</span>
+                  <span class="text-gray-600">95%</span>
+                </div>
+                <div class="h-2 bg-gray-200 rounded">
+                  <div
+                    class="h-2 bg-primary rounded skill-bar"
+                    style="width: 95%"
+                  ></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-gray-700">React</span>
+                  <span class="text-gray-600">90%</span>
+                </div>
+                <div class="h-2 bg-gray-200 rounded">
+                  <div
+                    class="h-2 bg-primary rounded skill-bar"
+                    style="width: 90%"
+                  ></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-gray-700">Node.js</span>
+                  <span class="text-gray-600">85%</span>
+                </div>
+                <div class="h-2 bg-gray-200 rounded">
+                  <div
+                    class="h-2 bg-primary rounded skill-bar"
+                    style="width: 85%"
+                  ></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-gray-700">Python</span>
+                  <span class="text-gray-600">80%</span>
+                </div>
+                <div class="h-2 bg-gray-200 rounded">
+                  <div
+                    class="h-2 bg-primary rounded skill-bar"
+                    style="width: 80%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="bg-white rounded-lg shadow-sm p-8 mb-8">
+            <h2 class="text-2xl font-semibold mb-6">Languages</h2>
+            <div class="space-y-4">
+              <div class="flex justify-between items-center">
+                <span class="text-gray-700">English</span>
+                <span class="text-sm text-gray-600">Native</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-gray-700">Spanish</span>
+                <span class="text-sm text-gray-600">Professional</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-gray-700">French</span>
+                <span class="text-sm text-gray-600">Intermediate</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="bg-white rounded-lg shadow-sm p-8">
+            <h2 class="text-2xl font-semibold mb-6">Education</h2>
+            <div class="space-y-6">
+              <div>
+                <h3 class="font-semibold">Master of Computer Science</h3>
+                <p class="text-secondary">Stanford University</p>
+                <p class="text-gray-600 text-sm">2014 - 2016</p>
+              </div>
+              <div>
+                <h3 class="font-semibold">Bachelor of Engineering</h3>
+                <p class="text-secondary">MIT</p>
+                <p class="text-gray-600 text-sm">2010 - 2014</p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-white border-t mt-12">
+      <div class="max-w-5xl mx-auto px-4 py-6">
+        <div class="flex justify-between items-center">
+          <p class="text-gray-600">
+            © 2025 John Anderson. All rights reserved.
+          </p>
+          <p class="text-gray-600">Last updated: March 9, 2025</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
